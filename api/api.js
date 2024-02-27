@@ -6,6 +6,20 @@ const sendError = (res, code, msg) => {
   res.send(msg)
 }
 
+const getPreachers = async ({ body }, res, db) => {
+  const { id } = body
+  db.query(`SELECT id, name, role FROM approles where role='preacher' UNION SELECT null, "None", null ORDER BY role desc, name`).then(result=>{
+    if(result){
+        res.status(200)
+        res.send(result)
+    }else{
+      sendError(res, 500, "Unknown error while fetching buddy list. Got undefined or null result")
+    }
+  }).catch(err=>{
+    sendError(res, 500, err)
+  })
+}
+
 const verifyUser = async ({ body }, res, db) => {
   const { id } = body
   db.query(`
@@ -184,6 +198,7 @@ const getCatchupData = async (req, res, db) => {
 }
 
 const endpoints = {
+  "/get-preachers": getPreachers,
   "/verify-user": verifyUser,
   "/send-otp": sendOTP,
   "/verify-otp": verifyOTP,
