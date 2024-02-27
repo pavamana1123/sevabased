@@ -7,7 +7,7 @@ self.addEventListener('install', (event) => {
             return cache.addAll([])
         })
     )
-})
+}) 
 
 self.addEventListener('activate', () => {
     clients.claim()
