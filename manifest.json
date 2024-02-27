@@ -1,0 +1,20 @@
+{
+  "name": "FOLK Mysore",
+  "short_name": "FOLK Mysore",
+  "start_url": "./login",
+  "id": "FOLK",
+  "theme_color": "#000",
+  "scope": "./",
+  "background_color": "#fff",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "550x550"
+    }
+  ],
+  "display": "standalone",
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  }
+}
