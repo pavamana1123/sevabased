@@ -1,7 +1,7 @@
 <IfModule mime_module>
   AddHandler application/x-httpd-ea-php56 .php .php5 .phtml
 </IfModule>
- 
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
