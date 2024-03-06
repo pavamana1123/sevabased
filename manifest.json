@@ -1,8 +1,8 @@
 {
-  "name": "FOLK Mysore",
-  "short_name": "FOLK Mysore",
+  "name": "SevaBase",
+  "short_name": "SevaBase",
   "start_url": "./login",
-  "id": "FOLK",
+  "id": "SevaBase",
   "theme_color": "#000",
   "scope": "./",
   "background_color": "#fff",
